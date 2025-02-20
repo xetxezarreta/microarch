@@ -6,32 +6,19 @@ This guide provides a structured approach to begin researching microarchitectura
 
 Before diving into security, understand how computer architecture *works*.
 
-1.  **Computer Architecture Basics:**
-
-    *   **Instruction Set Architecture (ISA):**
-        *   Understand the basic concepts (x86, ARM, RISC-V).
-        *   Know registers, instructions, memory addressing, and execution pipeline principles.
-        *   Focus on how instructions interact with hardware.
-    *   **Processor Pipeline:**
-        *   Grasp stages (Fetch, Decode, Execute, Memory Access, Writeback).
-        *   Understand instruction flow and *out-of-order execution* (critical for security).
-    *   **Memory Hierarchy:**
-        *   Familiarize yourself with the hierarchy (caches - L1, L2, L3, main memory, virtual memory).
-        *   Understand cache lines, coherency protocols (e.g., MESI), and data movement.  Cache timing is crucial.
-    *   **Operating System Concepts:**
-        *   Understand process management, memory, and privileges.
-        *   Know virtual memory, system calls, and kernel/user space distinction.
-
-2.  **Recommended Resources for Foundation Building:**
-
-    *   **Textbooks:**
-        *   *Computer Organization and Design* (Patterson & Hennessy) - Focus on pipelining, memory hierarchy, and I/O. RISC-V edition is recommended.
-        *   *Computer Architecture: A Quantitative Approach* (Hennessy & Patterson) - More advanced.
-        *   *Operating System Concepts* (Silberschatz, Galvin, & Gagne)
-    *   **Online Courses:**
-        *   Coursera/edX/Udacity: Introductory computer architecture and OS courses.
-        *   MIT OpenCourseware (OCW): 6.004, 6.172 are good starting points.
-    *   **Practice:** Use simulators.
+1.  **Instruction Set Architecture (ISA):**
+    *   Understand the basic concepts (x86, ARM, RISC-V).
+    *   Know registers, instructions, memory addressing, and execution pipeline principles.
+    *   Focus on how instructions interact with hardware.
+2.  **Processor Pipeline:**
+    *   Grasp stages (Fetch, Decode, Execute, Memory Access, Writeback).
+    *   Understand instruction flow and *out-of-order execution* (critical for security).
+3.  **Memory Hierarchy:**
+    *   Familiarize yourself with the hierarchy (caches - L1, L2, L3, main memory, virtual memory).
+    *   Understand cache lines, coherency protocols (e.g., MESI), and data movement.  Cache timing is crucial.
+4.  **Operating System Concepts:**
+    *   Understand process management, memory, and privileges.
+    *   Know virtual memory, system calls, and kernel/user space distinction.
 
 ## II. Core Concepts in Microarchitectural Security
 
@@ -88,12 +75,7 @@ Focus on security-specific aspects.
     *   **Assembly Language (x86, ARM, etc.):** Analyze disassembled code, write timing-sensitive code.
     *   **Python:** Scripting, data analysis, automation.
 
-4.  **Operating System Knowledge (Deep Dive):**
-
-    *   **Kernel Internals:** Memory management, scheduling, security.
-    *   **Virtualization:** How hypervisors work.
-
-5.  **Reverse Engineering Tools:**
+4.  **Reverse Engineering Tools:**
 
     *   **Disassemblers (IDA Pro, Ghidra):** Analyze compiled code.
 
@@ -126,18 +108,18 @@ Focus on security-specific aspects.
     *   Simulators and counters to test hypotheses.
     *   Rigorous methodology.
 
-5.  **Collaboration:**
-
-    *   Work with other researchers.
-
-6.  **Stay Updated:**
+5.  **Stay Updated:**
 
     *   Follow researchers, subscribe to mailing lists, check publications.
 
 ## V. Getting Started - A Concrete First Step
 
 1.  **Focus on Spectre v1:** Fundamental transient execution attack.
+
 2.  **Read the original Spectre paper:** [https://spectreattack.com/spectre.pdf](https://spectreattack.com/spectre.pdf)
+
 3.  **Implement a simple proof-of-concept:** Adapt online examples (C).
+
 4.  **Use `perf` to analyze:** Observe branch mispredictions and cache behavior.
+
 5.  **Move to gem5:** Simulate the attack in gem5.
